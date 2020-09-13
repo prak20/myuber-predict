@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Uber Ride Prediction</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+  <body>
+   <h1>Uber Ride Weekly Analysis</h1>
+   <form action="{{url_for('predict')}}" method="post">
+     <img src = "https://cms.qz.com/wp-content/uploads/2016/09/uber-self-driving-car-pittsburgh.jpg?quality=80&strip=all&w=3000" align ="left" width="400" height="300">
+     <img src = "https://www.gannett-cdn.com/-mm-/5cac1690984d1c31c8a45d98d509cd08c5111322/c=0-378-5477-3459/local/-/media/2017/06/08/USATODAY/usatsports/epa_taiwan_transport_uber_90214181.jpg?width=3200&height=1680&fit=crop" align ="center" width="400" height="300">
+     <img src = "https://gazettereview.com/wp-content/uploads/2017/09/uber-taxi-for-web-0-1.jpg" align ="right" width="400" height="300">
+
+   </form>
+   <br>
+   <br>
+   <br>
+   {{ prediction_text }}
+  </body>
+</html>
